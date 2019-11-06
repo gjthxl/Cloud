@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.baizhi.dao.UserDAO">
+    <!-- Admin loginAdmin(Admin admin) -->
+    <select id="loginAdmin" resultType="Admin" parameterType="java.lang.String">
+        select * from ems_admin where username=#{0}
+    </select>
+
+    <!-- User loginUser(User user) -->
+    <select id="loginUser" resultType="User" parameterType="java.lang.String">
+        select * from cloud_user where username=#{0}
+    </select>
+
+    <!-- void addUser(User user) -->
+    <insert id="addUser" parameterType="User">
+        insert into cloud_user values (#{id},#{username},#{password},#{phone},#{email},#{ip},#{from},#{status})
+    </insert>
+
+    <!-- List<User> showAllUser() -->
+    <select id="showAllUser" resultType="User">
+        select * from cloud_user limit #{0},#{1}
+    </select>
+
+    <!-- void updateUser(User user) -->
+    <update id="updateUser" parameterType="User">
+        update cloud_user
+        <set>
+            <if test="phone!=null">
+                phone=#{phone},
+            </if>
+            <if test="email!=null">
+                email=#{email},
+            </if>
+            <if test="status!=null">
+                status=#{status}
+            </if>
+        </set>
+        where username=#{username}
+    </update>
+
+    <!-- void deleteUser(User user) -->
+    <delete id="deleteUser" parameterType="User">
+        delete from cloud_user where username=#{username}
+    </delete>
+
+    <!-- Integer queryAllCount() -->
+    <select id="queryAllCount" resultType="java.lang.Integer">
+        select count(id) from cloud_user
+    </select>
+</mapper>

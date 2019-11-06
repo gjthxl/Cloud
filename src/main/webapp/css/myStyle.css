@@ -1,0 +1,13 @@
+table{
+	border:solid 56A1EF 1px;
+	background-color:EEF5FF;	
+     }
+.bg1{
+	background-image: url(image/login_head.gif); /*login_submit.gif*/
+     }
+.bt1{
+	background-image: url(image/login_submit.gif);
+	width:137px;
+	height:30px;
+	cursor:wait;/*|wait|pointer*/
+    }
