@@ -95,7 +95,7 @@
           <version>4.3.2.RELEASE</version>
       </dependency>
 
-      <!-- 引入mybatis相关jar -->
+      <!-- 引入mybatis相关jar hanhanwanyi-->
       <dependency>
           <groupId>org.mybatis</groupId>
           <artifactId>mybatis</artifactId>
