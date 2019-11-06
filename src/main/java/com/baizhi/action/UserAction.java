@@ -18,6 +18,8 @@ public class UserAction {
     private UserService userService;
 
     //铁憨憨
+	
+	//你才是铁憨憨
     
     @RequestMapping("/registMethod")
     public String registMethod(User user){
