@@ -17,6 +17,8 @@ public class UserAction {
     @Autowired
     private UserService userService;
 
+    //铁憨憨
+    
     @RequestMapping("/registMethod")
     public String registMethod(User user){
         try {
