@@ -88,7 +88,7 @@
           <artifactId>spring-test</artifactId>
           <version>4.3.2.RELEASE</version>
       </dependency>
-      <!--引入SpringMVC的相关依赖-->
+      <!--引入SpringMVC的相关依赖   hanhanhan-->
       <dependency>
           <groupId>org.springframework</groupId>
           <artifactId>spring-webmvc</artifactId>
